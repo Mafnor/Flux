@@ -18,6 +18,8 @@ vectorFlux:WriteFloat32(originalVector.X)
 vectorFlux:WriteFloat32(originalVector.Y)
 vectorFlux:WriteFloat32(originalVector.Z)
 
+vectorFlux:ResetCursor()
+
 local newVector = Vector3.new(vectorFlux:ReadFloat32(), vectorFlux:ReadFloat32(), vectorFlux:ReadFloat32())
 
 print(`Original Vector: {originalVector}')
