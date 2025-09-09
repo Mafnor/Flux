@@ -6,11 +6,9 @@ I've made this module so I don't have to write massive pieces of code to for exa
 
 ## How does this library work?
 
-When creating a new flux object, you start out at the first bit index of the buffer from where you can start writing and reading to and from the buffer.
-Whenever you read a value or write a value the bit index shifts by the offset, example being if you write a Float16 value to a flux, the bit index will be equal to 16.
+When you create a new flux object, it starts at the first bit index of the buffer—the point where reading from and writing to the buffer begins. Each read or write operation advances the bit index by the size of the value. For example, writing a Float16 value moves the bit index forward by 16 bits.
 
-You can change this index by changing the cursor position. You can find more about these methods in the Flux module.
-I've also left some examples that are in the github repository that you can look at.
+You can also manually adjust the index by changing the cursor position. More details on these methods can be found in the Flux module documentation. For practical reference, additional examples are available in the GitHub repository.
 
 ---
 
